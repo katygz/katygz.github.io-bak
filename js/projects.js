@@ -1,8 +1,9 @@
 const projectsData = [
     {
         id: 'AB',
-        title: 'AB',
-        image: 'img/projects/ab.jpg',
+        title: 'AB Testing for User Engagement Optimization in Mobile Gaming',
+        detailLink: 'https://github.com/katygz/AB-Testing-for-User-Engagement-Optimization-in-Mobile-Gaming',
+        image: 'img/projects/ab.png',
         carouselImages: [
             {
                 img: 'img/projects/ab.jpg',
@@ -21,8 +22,9 @@ const projectsData = [
     },
     {
         id: 'machine_learning',
-        title: 'Machine Learning',
-        image: 'img/projects/ml.png',
+        title: 'MachineLearning House Rental Prices Analysis',
+        detailLink: 'https://github.com/katygz/MachineLearning-House-Rental-Prices-Analysis-',
+        image: 'img/projects/ml.jpg',
         carouselImages: [
             {
                 img: 'img/projects/ml1.jpg',
@@ -40,8 +42,9 @@ const projectsData = [
     },
     {
         id: 'News',
-        title: 'News',
-        image: 'img/projects/news.jpg',
+        title: 'News Intelligence  -  Unleashing the Potential of User History for Click Prediction',
+        detailLink: 'https://github.com/katygz/News-Intelligence---Unleashing-the-Potential-of-User-History-for-Click-Prediction',
+        image: 'img/projects/news.png',
         carouselImages: [
             {
                 img: 'img/projects/news1.jpg',
@@ -62,8 +65,9 @@ const projectsData = [
 
     {
         id: 'Revolutionizing',
-        title: 'Revolutionizing',
-        image: 'img/projects/revolutionizing.jpg',
+        title: 'Revolutionizing Cash Flow Forecasts  - A Paradigm Shift in Purchase and Redemption Predictions',
+        detailLink: 'https://github.com/katygz/Revolutionizing-Cash-Flow-Forecasts---A-Paradigm-Shift-in-Purchase-and-Redemption-Predictions',
+        image: 'img/projects/revolutionizing.png',
         carouselImages: [
             {
                 img: 'img/projects/revolutionizing.jpg',
@@ -83,7 +87,8 @@ const projectsData = [
 
     {
         id: 'Ui',
-        title: 'Ui',
+        title: 'UI Change Implementation for Product Recommendation using AB Testing',
+        detailLink: 'https://github.com/katygz/UI_Change_Implementation_for_Product_Recommendation_using_AB_Testing',
         image: 'img/projects/ui.jpg',
         carouselImages: [
             { img: 'img/projects/ui1.jpg', desc: '',},
@@ -102,7 +107,8 @@ const projectsData = [
 
     {
         id: 'Yelp',
-        title: 'Yelp',
+        title: 'Yelp data analyst',
+        detailLink: 'https://github.com/katygz/Yelp_Data_Analysis',
         image: 'img/projects/yelp.png',
         carouselImages: [
             {
@@ -123,7 +129,8 @@ const projectsData = [
 
     {
         id: 'An_interactive',
-        title: 'An interactive',
+        title: 'An Interactive R Shiny App Mapping the Worlds Top-Rated Restaurants',
+        detailLink: 'https://github.com/katygz/An-Interactive-R-Shiny-App-Mapping-the-Worlds-Top-Rated-Restaurants',
         image: 'img/projects/interactive.jpg',
         carouselImages: [
             {
@@ -146,7 +153,8 @@ const projectsData = [
     {
         id: 'business_dognition',
         title: 'Business Process Change Recommendations for Dognition',
-        image: 'img/projects/dognition.png',
+        detailLink: 'https://github.com/katygz/Business-Process-Change-Recommendations-for-Dognition',
+        image: 'img/projects/dognition.jpg',
         carouselImages: [
             {
                 img: 'img/projects/dognition.png',
@@ -166,7 +174,8 @@ const projectsData = [
 
     {
         id: 'Increasing',
-        title: 'Increasing',
+        title: 'Increasing Real Estate Management Profits Harnessing Data Analytics',
+        detailLink: 'https://github.com/katygz/Increasing-Real-Estate-Management-Profits-Harnessing-Data-Analytics',
         image: 'img/projects/increasing.jpg',
         carouselImages: [
             {
@@ -193,9 +202,9 @@ const projectsData = [
 
 
     // if not enough for 3 columns in one row, put some empty placeholder div here to make it up to 3
-   // {
-   //      id: '',
-   //  },
+   {
+        id: '',
+    },
    //  {
    //      id: '',
    //  },
@@ -237,15 +246,20 @@ function createTileModal (pjItem) {
     let tileTpl = '';
     let modalTpl = '';
 
+    // <img className="modal-trigger" data-target="${pjItem.id}" src="${pjItem.image}">
     if (pjItem.id) {
         tileTpl = `
           <div class="tile is-parent">  
+            
             <article class="tile is-child notification">
-                    <p class="title" title="${pjItem.title}">${pjItem.title}</p>
+                    <p class="title" title="${pjItem.title}">
+                        <a style="text-decoration: none;" href="${pjItem.detailLink}">${pjItem.title}</a>
+                    </p>
                     <figure class="image is-3by2">
-                      <img class="modal-trigger" data-target="${pjItem.id}" src="${pjItem.image}">
+                      <a href="${pjItem.detailLink}"><img class=" "   src="${pjItem.image}"></a>
                     </figure>
             </article>
+            
           </div>
         `;
         modalTpl = `    
@@ -289,7 +303,8 @@ function displayProjects () {
 
     const groupDivs = [];
     const modalDivs = [];
-    chunkArray(projectsData, 3).map(groupItems => {
+    const rowItemCount = 2;
+    chunkArray(projectsData, rowItemCount).map(groupItems => {
 
         const tileItems = [];
         groupItems.map(item => {
