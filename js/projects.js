@@ -153,7 +153,8 @@ const projectsData = [
     {
         id: 'business_dognition',
         title: 'Business Process Change Recommendations for Dognition',
-        detailLink: 'https://github.com/katygz/Business-Process-Change-Recommendations-for-Dognition',
+        // detailLink: 'https://github.com/katygz/Business-Process-Change-Recommendations-for-Dognition',
+        detailLink: 'https://public.tableau.com/app/profile/katygui920/viz/RecommendationsforDognitionBusinessProcessChange_16526001885840/1_1',
         image: 'img/projects/dognition.jpg',
         carouselImages: [
             {
@@ -175,7 +176,8 @@ const projectsData = [
     {
         id: 'Increasing',
         title: 'Increasing Real Estate Management Profits Harnessing Data Analytics',
-        detailLink: 'https://github.com/katygz/Increasing-Real-Estate-Management-Profits-Harnessing-Data-Analytics',
+        // detailLink: 'https://github.com/katygz/Increasing-Real-Estate-Management-Profits-Harnessing-Data-Analytics',
+        detailLink: 'https://public.tableau.com/app/profile/katygui920/viz/Capstoneprojectfinal-Watershed-ZHIGUI/Dashboard1',
         image: 'img/projects/increasing.jpg',
         carouselImages: [
             {
