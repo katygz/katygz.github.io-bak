@@ -1,0 +1,8 @@
+.tile.is-child {
+    width: 0; /*set its parent div to 0 width, let flex-grow stop growing*/
+}
+.tile.is-child .title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
