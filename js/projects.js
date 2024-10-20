@@ -130,7 +130,7 @@ const projectsData = [
     {
         id: 'An_interactive',
         // title: 'An Interactive R Shiny App Mapping the Worlds Top-Rated Restaurants',
-        title: 'Dallas Real EstateInsights-Powered by R Shiny',
+        title: 'Dallas Real Estate Insights-Powered by R Shiny',
         detailLink: 'https://github.com/katygz/An-Interactive-R-Shiny-App-Mapping-the-Worlds-Top-Rated-Restaurants',
         image: 'img/projects/interactive.png',
         carouselImages: [
