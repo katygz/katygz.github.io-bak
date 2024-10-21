@@ -107,7 +107,7 @@ const projectsData = [
 
     {
         id: 'Yelp',
-        title: 'Yelp data analyst',
+        title: 'Yelp Data Analyst',
         detailLink: 'https://github.com/katygz/Yelp_Data_Analysis',
         image: 'img/projects/yelp.png',
         carouselImages: [
