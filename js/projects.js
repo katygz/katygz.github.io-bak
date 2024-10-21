@@ -24,7 +24,7 @@ const projectsData = [
         id: 'machine_learning',
         title: 'MachineLearning House Rental Prices Analysis',
         detailLink: 'https://github.com/katygz/MachineLearning-House-Rental-Prices-Analysis-',
-        image: 'img/projects/ml.jpg',
+        image: 'img/projects/ml.png',
         carouselImages: [
             {
                 img: 'img/projects/ml1.jpg',

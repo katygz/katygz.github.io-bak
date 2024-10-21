@@ -1,3 +1,7 @@
+.section {
+    padding: 5.15rem 1.5rem 0.15rem 1.5rem;
+}
+
 .tile.is-child {
     width: 0; /*set its parent div to 0 width, let flex-grow stop growing*/
 }
@@ -11,4 +15,16 @@
 
 .modal-card-title {
     flex-shrink: 1;
+}
+
+
+.navbar.is-primary {
+    position: fixed;
+    width: 100%;
+}
+.hero-body {
+    padding: 4rem 1.5rem;
+}
+.experience-points {
+    display: none;
 }
